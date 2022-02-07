@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
             if(query != null && query.contains("logout")) {
                 session.invalidate();
                 
-                request.setAttribute("message", "You are logged out.");
+                request.setAttribute("message", "You have successfully logged out.");
             }
             else {
                 response.sendRedirect("home");
@@ -75,7 +75,7 @@ public class LoginServlet extends HttpServlet {
             }
             else {
                 request.setAttribute("username", username);
-                request.setAttribute("message", "Username or assword is invalid.");
+                request.setAttribute("message", "Username or password is invalid.");
             }
         }
    
